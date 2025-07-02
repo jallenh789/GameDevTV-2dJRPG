@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://c03ubbbfjqq43"]
+
+[ext_resource type="Texture2D" uid="uid://dsoaw6msndyhb" path="res://Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetReliefDetail.png" id="1_jn0qf"]
+[ext_resource type="Script" uid="uid://c5u83pq62mpgv" path="res://Scenes/LockedDoor/locked_door.gd" id="1_nvbpm"]
+[ext_resource type="AudioStream" uid="uid://blndm1p3y2vto" path="res://Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Sounds/Game/Fire2.wav" id="3_151xd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3lix"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi3cw"]
+atlas = ExtResource("1_jn0qf")
+region = Rect2(31.2991, -0.390936, 16.5143, 16.3508)
+
+[node name="LockedDoor" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 6
+script = ExtResource("1_nvbpm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d3lix")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_qi3cw")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_151xd")
+volume_db = 0.7
+pitch_scale = 1.2
