@@ -501,6 +501,7 @@ sprite_frames = SubResource("SpriteFrames_io2mu")
 animation = &"0_hp"
 
 [node name="Sword" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-3, -9)
 rotation = 1.74533
 texture = ExtResource("7_825xp")
