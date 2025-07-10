@@ -12,7 +12,7 @@ Build a 2D Action-Adventure Game:
 🛠 Built With
 Godot Engine – Version 4.4 (specify the version used)
 
-GDScript / C# / VisualScript
+GDScript
 
 Other tools/libraries:
 
